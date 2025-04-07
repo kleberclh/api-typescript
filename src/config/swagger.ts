@@ -6,12 +6,15 @@ const options: swaggerJSDoc.Options = {
     openapi: '3.0.0',
     info: {
       title: 'Minha API Express com Swagger',
-      version: '1.0.0',
+      version: '1.0.1',
       description: 'Documentação da API usando Swagger',
     },
     servers: [
       {
-        url: 'http://localhost:3000', // ajuste conforme necessário
+        url: 'http://localhost:4001', // ajuste conforme necessário
+      },
+      {
+        url: 'http://produção:4001', // ajuste conforme necessário
       },
     ],
   },

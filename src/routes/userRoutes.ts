@@ -6,11 +6,42 @@ import {
 } from "../controllers/userController";
 
 const userRouter = Router();
-
-userRouter.post("/create", createUser); // agora deve funcionar certinho
 /**
  * @openapi
- * /api/usuarios:
+ * /user/create:
+ *   post:
+ *     tags:
+ *       - Usuários
+ *     summary: Cria usuário
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - name
+ *               - email
+ *               - password
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 example: João Silva
+ *               email:
+ *                 type: string
+ *                 example: joao@email.com
+ *               password:
+ *                 type: string
+ *                 example: 123456
+ *     responses:
+ *       200:
+ *         description: Usuário criado com sucesso!
+ */
+
+userRouter.post("/create", createUser);
+/**
+ * @openapi
+ * /user/getall:
  *   get:
  *     tags:
  *       - Usuários
