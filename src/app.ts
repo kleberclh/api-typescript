@@ -22,6 +22,7 @@ app.get("/", (req, res) => {
       <body>
         <h1>🚀 API TypeScript Rodando!</h1>
         <p><a href="/api-docs">Ver documentação Swagger</a></p>
+        <p> Teste </p>
       </body>
     </html>
   `);
