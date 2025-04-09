@@ -14,7 +14,7 @@ const options: swaggerJSDoc.Options = {
         url: 'http://localhost:4001', // ajuste conforme necessário
       },
       {
-        url: 'http://produção:4001', // ajuste conforme necessário
+        url: 'http://lnkfcphcz72jgeehvurtadmg4yuawx.maisinternet.net.br:4005/', // ajuste conforme necessário
       },
     ],
   },

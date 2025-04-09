@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "dotenv -e .env.development -- prisma generate && dotenv -e .env.development -- prisma migrate dev && dotenv -e .env.development -- ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "dotenv -e .env.production -- prisma generate && tsc",
-    "start": "dotenv -e .env.production -- prisma migrate deploy && node dist/server.js"
+    "build": "dotenv -e .env -- prisma generate && tsc",
+    "start": "dotenv -e .env -- prisma migrate deploy && node dist/server.js"
   },
   "keywords": [],
   "author": "",
