@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js"
+    "dev": "dotenv -e .env.development -- prisma generate && dotenv -e .env.development -- prisma migrate dev && dotenv -e .env.development -- ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "dotenv -e .env.production -- prisma generate && tsc",
+    "start": "dotenv -e .env.production -- prisma migrate deploy && node dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,8 @@
     "@types/node": "^22.14.0",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.8",
+    "cross-env": "^7.0.3",
+    "dotenv-cli": "^8.0.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
   }
